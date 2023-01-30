@@ -433,7 +433,7 @@ def terabox(url) -> str:
         jar = MozillaCookieJar('terabox.txt')
         jar.load()
         session.cookies.update(jar)
-        res = session.request('GET', f'https://www.terabox.com/share/list?app_id=250528&shorturl={key}&root=1')
+        res = session.request('GET', f'https://www.momerybox.com/share/list?app_id=250528&shorturl={key}&root=1')
         result = res.json()['list']
     except Exception as e:
         raise DirectDownloadLinkException(f"ERROR: {e.__class__.__name__}")
